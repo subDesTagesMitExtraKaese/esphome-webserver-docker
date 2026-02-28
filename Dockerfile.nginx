@@ -1,0 +1,3 @@
+FROM nginx:1.29.4-alpine
+COPY ./_static /usr/share/nginx/html
+EXPOSE 80
