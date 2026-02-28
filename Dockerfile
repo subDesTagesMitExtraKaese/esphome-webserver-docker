@@ -14,5 +14,5 @@ COPY . .
 RUN npm run build
 
 FROM nginx:1-alpine
-COPY --from=builder /app/_static /usr/share/nginx/html
+COPY --from=builder --chown=nginx:nginx /app/_static /usr/share/nginx/html
 EXPOSE 80
